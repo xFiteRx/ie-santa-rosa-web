@@ -1,0 +1,54 @@
+/* Colores principales de la escuela */
+:root {
+    --fondo: #f4f6f9;
+    --texto: #333333;
+    --colegio-azul: #003366; /* Azul institucional */
+    --blanco: #ffffff;
+}
+
+/* Cuerpo de la página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra de navegación superior */
+header {
+    background-color: var(--colegio-azul);
+    color: var(--blanco);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Botón de Modo Noche/Día */
+#btn-modo {
+    background-color: var(--blanco);
+    color: var(--colegio-azul);
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btn-modo:hover {
+    background-color: #e0e0e0;
+}
+
+/* Contenido Principal */
+main {
+    padding: 40px;
+    text-align: center;
+}

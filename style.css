@@ -1,54 +1,119 @@
-/* Colores principales de la escuela */
+/* VARIABLES GLOBALES: Facilitan el orden y cambios futuros (Modo Día/Noche) */
 :root {
-    --fondo: #f4f6f9;
-    --texto: #333333;
-    --colegio-azul: #003366; /* Azul institucional */
+    --rosa-principal: #e56b6f;
+    --azul-estudiante: #0077b6;
+    --dorado-docente: #b7791f;
+    --oscuro-director: #252629;
+    --texto-mutado: #6c757d;
+    --fondo-modal: rgba(0, 0, 0, 0.4);
     --blanco: #ffffff;
+    --borde-suave: rgba(0, 0, 0, 0.1);
 }
 
-/* Cuerpo de la página */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--fondo);
-    color: var(--texto);
-    margin: 0;
-    padding: 0;
+/* RESPONSIVE & LAYOUTS CLEAN UP */
+@media (max-width: 768px) {
+    .ucv-video-layout { grid-template-columns: 1fr; }
+    .hero-section { height: 520px; }
+    .hero-counters-overlay { 
+        grid-template-columns: 1fr; 
+        gap: 55px; 
+        max-width: 320px; 
+        bottom: 20px;
+    }
+    .nav-menu { display: none; }
+    .top-info-bar { 
+        flex-direction: column; 
+        text-align: center; 
+        justify-content: center; 
+        gap: 10px; 
+        padding: 10px 5%; 
+    }
+    .footer-container { grid-template-columns: 1fr; gap: 30px; }
+    .admin-panel { 
+        right: 15px; 
+        bottom: 15px; 
+        width: calc(100% - 30px); 
+        max-width: 320px; 
+    }
 }
 
-/* Barra de navegación superior */
-header {
-    background-color: var(--colegio-azul);
-    color: var(--blanco);
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+/* MODAL REFACTORIZADO: Quitamos los estilos del HTML y los pasamos aquí */
+.modal-overlay {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: var(--fondo-modal); 
+    backdrop-filter: blur(2px); 
+    align-items: center; 
+    justify-content: center;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 24px;
+.modal-content {
+    background-color: var(--blanco); 
+    padding: 35px; 
+    border-radius: 16px; 
+    width: 90%; 
+    max-width: 760px; 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); 
+    border: 1px solid rgba(255, 255, 255, 0.7); 
+    position: relative; 
+    transition: all 0.3s ease;
 }
 
-/* Botón de Modo Noche/Día */
-#btn-modo {
-    background-color: var(--blanco);
-    color: var(--colegio-azul);
-    border: none;
-    padding: 10px 15px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
+.close-btn {
+    position: absolute; 
+    right: 22px; 
+    top: 16px; 
+    font-size: 26px; 
+    cursor: pointer; 
+    color: #888; 
+    font-weight: bold; 
+    transition: color 0.2s;
 }
 
-#btn-modo:hover {
-    background-color: #e0e0e0;
+.close-btn:hover { color: var(--rosa-principal); }
+
+.back-link {
+    display: none; 
+    position: absolute; 
+    left: 22px; 
+    top: 22px; 
+    font-size: 14px; 
+    cursor: pointer; 
+    color: var(--rosa-principal); 
+    font-weight: 600;
 }
 
-/* Contenido Principal */
-main {
-    padding: 40px;
-    text-align: center;
+.role-grid {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    margin-bottom: 30px;
 }
+
+.form-container {
+    display: none; 
+    max-width: 400px; 
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 6px; 
+    box-sizing: border-box; 
+    font-size: 14px; 
+    color: #333; 
+    outline: none;
+}
+
+.form-control:focus { border-color: var(--rosa-principal); }

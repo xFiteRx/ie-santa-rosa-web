@@ -3,22 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I.E. Santa Rosa de Huarmey</title>
-    <link rel="stylesheet" href="style.css">
+    <title>I.E. Santa Rosa | Santo Domingo - Huarmey</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
 
-    <header>
-        <h1>I.E. Santa Rosa</h1>
-        <nav>
-            <button id="btn-modo">🌓 Cambiar Modo</button>
-        </nav>
+    <div class="top-info-bar">
+        <div class="top-info-item">
+            <i class="fa-solid fa-location-dot"></i> <span>A.H. Santo Domingo, Huarmey - Áncash</span>
+        </div>
+        <div class="top-info-item">
+            <i class="fa-solid fa-school"></i> <span>Escuela pública | Construyendo nuestro futuro</span>
+        </div>
+        <div class="top-social-links">
+            <a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <nav class="main-navbar">
+        <a href="index.html" class="navbar-brand">
+            <img src="IMG/Logo.png" alt="Insignia I.E. Santa Rosa">
+            <div class="brand-text">
+                <h2>I.E. Santa Rosa</h2>
+                <p>Santo Domingo - Huarmey</p>
+            </div>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li>
+                <a href="javascript:void(0);">Niveles <i class="fa-solid fa-chevron-down" style="font-size: 0.75em;"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="SantaRosa/primaria.html">Primaria</a></li>
+                    <li><a href="SantaRosa/secundaria.html">Secundaria</a></li>
+                </ul>
+            </li>
+            <li><a href="SantaRosa/nosotros.html">Nosotros</a></li>
+            <li><a href="SantaRosa/documentos.html">Documentos</a></li>
+            <li><a href="SantaRosa/contacto.html">Ubicación</a></li>
+            <li id="navbar-auth-section">
+                <a id="btn-login-modal" class="btn-admin" title="Portal de Acceso">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-bg-slider">
+            <div class="slide active" style="background-image: url('IMG/FRONTIS.jpg');"></div>
+            <div class="slide" style="background-image: url('IMG/Primaria1.jpg');"></div>
+            <div class="slide" style="background-image: url('IMG/Secundaria2.jpg');"></div>
+        </div>
+        <div class="hero-counters-overlay">
+            <div class="elementor-counter">
+                <div class="icon-box-3d bg-student-3d"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="elementor-counter-title">Estudiantes</div>
+                <div class="elementor-counter-number-wrapper">
+                    <span class="elementor-counter-number num-student" data-duration="2000" data-to-value="680" data-from-value="0">0</span>
+                </div>
+            </div>
+            <div class="elementor-counter">
+                <div class="icon-box-3d bg-teacher-3d"><i class="fa-solid fa-chalkboard-user"></i></div>
+                <div class="elementor-counter-title">Docentes</div>
+                <div class="elementor-counter-number-wrapper">
+                    <span class="elementor-counter-number num-teacher" data-duration="2000" data-to-value="25" data-from-value="0">0</span>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <h2>Bienvenidos a la Plataforma Dinámica</h2>
-        <p>Espacio tecnológico gestionado por Soporte TI.</p>
-    </main>
+    <section class="project-section">
+        <div class="project-container">
+            <div class="project-intro-text">
+                <h2>Nuestra Institución</h2>
+                <p>La <strong>I.E. Santa Rosa de Santo Domingo</strong> es una institución pública de educación básica...</p>
+            </div>
+            <div class="ucv-video-layout">
+                <div class="video-player-box">
+                    <iframe id="ucv-main-player" src="https://www.youtube.com/embed/p3X_S65pGZ8?enablejsapi=1" title="Reproductor" allowfullscreen></iframe>
+                </div>
+                <div class="ucv-playlist-side">
+                    <div class="playlist-header-title">Videos del Proyecto:</div>
+                    <div class="playlist-video-item playing-now" id="default-video-item">
+                        <div class="video-item-thumb"><i class="fa-solid fa-play"></i></div>
+                        <div class="video-item-details">¡Bienvenidos al año escolar!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-logo-side">
+                <div class="footer-logo">
+                    <img src="IMG/Logo.png" alt="Insignia I.E. Santa Rosa">
+                    <h3>I.E. Santa Rosa</h3>
+                </div>
+                <p class="footer-text-muted">Santo Domingo - Huarmey | Portal Oficial.</p>
+            </div>
+            <div class="footer-box">
+                <h3>Horario de Atención</h3>
+                <ul class="footer-info-list">
+                    <li><i class="fa-solid fa-clock"></i><div><strong>Atención:</strong> Lunes a Viernes 9:00 AM - 4:00 PM</div></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h3>Contacto</h3>
+                <a href="libro-reclamaciones.html" class="reclamaciones-link"><i class="fa-solid fa-book"></i> Libro de Reclamaciones</a>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 I.E. Santa Rosa de Santo Domingo.</div>
+    </footer>
+
+    <div id="admin-floating-panel" class="admin-panel hidden">
+        <div class="admin-panel-header">
+            <i class="fa-solid fa-screwdriver-wrench"></i> <span>Modo Soporte TI Activo</span>
+        </div>
+        <div class="admin-panel-body">
+            <button id="btn-edit-sections" class="btn-admin-action"><i class="fa-solid fa-arrows-up-down-left-right"></i> Mover Secciones</button>
+            <button id="btn-add-teacher" class="btn-admin-action"><i class="fa-solid fa-user-plus"></i> Dar de Alta Maestro</button>
+            <button id="btn-delete-user" class="btn-admin-action-danger"><i class="fa-solid fa-user-minus"></i> Eliminar Usuario</button>
+        </div>
+    </div>
+
+    <div id="loginModal" class="modal-overlay">
+        <div class="modal-content">
+            <span id="closeModal" class="close-btn">&times;</span>
+            <span id="backToRoles" class="back-link">← Volver</span>
+
+            <div id="roleSelectionView">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <h3>Plataforma Educativa</h3>
+                    <p>Selecciona tu perfil de ingreso</p>
+                </div>
+                <div class="role-grid">
+                    <div class="role-card-3d" id="role-estudiante">
+                        <i class="fa-solid fa-graduation-cap" style="font-size: 2.4em; color: #0077b6;"></i>
+                        <span>Estudiante</span>
+                    </div>
+                    <div class="role-card-3d" id="role-docente">
+                        <i class="fa-solid fa-chalkboard-user" style="font-size: 2.4em; color: #b7791f;"></i>
+                        <span>Docente</span>
+                    </div>
+                    <div class="role-card-3d" id="role-director">
+                        <i class="fa-solid fa-user-tie" style="font-size: 2.4em; color: #252629;"></i>
+                        <span>Director</span>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <a id="link-soporte"><i class="fa-solid fa-screwdriver-wrench"></i> Soporte TI</a>
+                </div>
+            </div>
+
+            <div id="loginFormView" class="form-container">
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <div id="formIconContainer" style="font-size: 2.3em;"></div>
+                    <h3 id="formTitle">Acceso</h3>
+                </div>
+                <form id="loginForm">
+                    <input type="hidden" id="selectedRole" value="">
+                    <div class="form-group">
+                        <label>Correo Electrónico:</label>
+                        <input type="email" id="loginEmail" class="form-control" required placeholder="ejemplo@iesantarosa.edu.pe">
+                    </div>
+                    <div class="form-group">
+                        <label>Contraseña:</label>
+                        <input type="password" id="loginPassword" class="form-control" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" id="submitBtn" class="form-control" style="font-weight:700; cursor:pointer;">Ingresar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/app.js"></script>
 </body>
 </html>
